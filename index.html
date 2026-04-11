@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jonathan Chang — UTS Professional Experience Review</title>
+  <meta name="description" content="Jonathan Chang's professional e-portfolio for UTS 41055 Professional Experience Review — Assignment 3." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Particle Canvas -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- ═══════════════════════════════════════════════════════
+     SIDEBAR NAVIGATION (Desktop)
+     ═══════════════════════════════════════════════════════ -->
+<nav id="sidebar" aria-label="Main navigation">
+  <div class="sidebar-logo">JC</div>
+
+  <button class="nav-btn active" data-target="home" aria-label="Home">
+    <i class="fa-solid fa-house"></i>
+    <span class="label">Home</span>
+  </button>
+
+  <button class="nav-btn" data-target="resume" aria-label="Resume">
+    <i class="fa-solid fa-file-lines"></i>
+    <span class="label">Resume</span>
+  </button>
+
+  <button class="nav-btn" data-target="reflections" aria-label="Reflections">
+    <i class="fa-solid fa-lightbulb"></i>
+    <span class="label">Reflect</span>
+  </button>
+
+  <button class="nav-btn" data-target="coverletter" aria-label="Cover Letter">
+    <i class="fa-solid fa-envelope-open-text"></i>
+    <span class="label">Letter</span>
+  </button>
+
+  <div class="sidebar-bottom">
+    <a class="nav-btn" href="assets/Jonathan_Chang_CV.pdf" download aria-label="Download CV">
+      <i class="fa-solid fa-download"></i>
+      <span class="label">CV</span>
+    </a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════
+     MOBILE NAVIGATION
+     ═══════════════════════════════════════════════════════ -->
+<nav id="mobile-nav" aria-label="Mobile navigation">
+  <button class="mobile-nav-btn active" data-target="home">
+    <i class="fa-solid fa-house"></i>
+    <span class="label">Home</span>
+  </button>
+  <button class="mobile-nav-btn" data-target="resume">
+    <i class="fa-solid fa-file-lines"></i>
+    <span class="label">Resume</span>
+  </button>
+  <button class="mobile-nav-btn" data-target="reflections">
+    <i class="fa-solid fa-lightbulb"></i>
+    <span class="label">Reflect</span>
+  </button>
+  <button class="mobile-nav-btn" data-target="coverletter">
+    <i class="fa-solid fa-envelope-open-text"></i>
+    <span class="label">Letter</span>
+  </button>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════
+     MAIN CONTENT
+     ═══════════════════════════════════════════════════════ -->
+<main id="main">
+
+  <!-- ────────────────────────────────────────────────────
+       SECTION 1: HOME
+       ──────────────────────────────────────────────────── -->
+  <section id="home" class="section">
+    <div class="home-inner">
+
+      <!-- Avatar -->
+      <div class="avatar-wrapper fade-in">
+        <div class="avatar-ring">
+          <div class="avatar-placeholder">
+            <i class="fa-solid fa-user"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Home Text -->
+      <div class="home-text fade-in">
+        <p class="greeting">Hello, World! 👋</p>
+        <h1 class="home-name">Jonathan Chang</h1>
+
+        <p class="typewriter-wrap">
+          <span class="typewriter-prefix">I'm a </span><span id="typewriter-text"></span>
+        </p>
+
+        <p class="home-bio">
+          I am a third-year Bachelor of Engineering (Software Engineering) student at the
+          University of Technology Sydney (UTS), with a passion for building innovative
+          software solutions. This e-portfolio reflects my academic journey, professional
+          experience, and growth as a developing engineer for subject
+          <strong class="text-cyan">41055 Professional Experience Review</strong>.
+        </p>
+
+        <div class="cta-buttons">
+          <button class="btn btn-primary" onclick="document.getElementById('resume').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-briefcase"></i> View My Work
+          </button>
+          <a class="btn btn-secondary" href="assets/Jonathan_Chang_CV.pdf" download>
+            <i class="fa-solid fa-download"></i> Download CV
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ────────────────────────────────────────────────────
+       SECTION 2: RESUME
+       ──────────────────────────────────────────────────── -->
+  <section id="resume" class="section">
+    <h2 class="section-title fade-in">Resume &amp; CV</h2>
+    <p class="section-subtitle fade-in">Academic &amp; Professional Profile</p>
+    <div class="section-divider fade-in"></div>
+
+    <!-- Professional Summary -->
+    <div class="glass-card fade-in" style="margin-bottom:2rem; max-width:780px;">
+      <p class="resume-block-title"><i class="fa-solid fa-circle-user"></i> Professional Summary</p>
+      <p style="color:var(--text-muted); line-height:1.8; font-size:0.93rem;">
+        Motivated third-year Software Engineering student at UTS with hands-on experience in software
+        development, system design, and collaborative project delivery. Adept at applying theoretical
+        knowledge to practical challenges, with demonstrated capability in Java, Python, and web
+        technologies. Seeking to leverage academic training and work-integrated learning experience
+        to contribute meaningfully to a forward-thinking technology team.
+      </p>
+    </div>
+
+    <div class="resume-grid">
+      <!-- Left Column -->
+      <div class="resume-col">
+
+        <!-- Education -->
+        <div class="glass-card fade-in">
+          <p class="resume-block-title"><i class="fa-solid fa-graduation-cap"></i> Education</p>
+
+          <div class="timeline-entry">
+            <div class="tl-header">
+              <span class="tl-title">Bachelor of Engineering (Software Engineering)</span>
+              <span class="tl-badge">2022 – 2026</span>
+            </div>
+            <p class="tl-sub">University of Technology Sydney · Faculty of Engineering and IT</p>
+            <div class="tl-body">
+              <ul>
+                <li>Specialisation in Software Systems</li>
+                <li>Relevant subjects: Software Architecture, Algorithms &amp; Data Structures, Database Systems, Human-Computer Interaction, Professional Engineering Practice</li>
+                <li>WAM: 78 (Distinction average)</li>
+                <li>Member of UTS Tech Society and UTS Engineering Society</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-entry">
+            <div class="tl-header">
+              <span class="tl-title">Higher School Certificate</span>
+              <span class="tl-badge">2021</span>
+            </div>
+            <p class="tl-sub">James Ruse Agricultural High School · Sydney, NSW</p>
+            <div class="tl-body">ATAR: 96.80 · Completed Mathematics Extension 2, Software Design &amp; Development, Physics</div>
+          </div>
+        </div>
+
+        <!-- Work Experience -->
+        <div class="glass-card fade-in">
+          <p class="resume-block-title"><i class="fa-solid fa-briefcase"></i> Work Experience</p>
+
+          <div class="timeline-entry">
+            <div class="tl-header">
+              <span class="tl-title">Software Engineering Intern</span>
+              <span class="tl-badge">Jun 2024 – Nov 2024</span>
+            </div>
+            <p class="tl-sub">Atlassian · Sydney, NSW (Hybrid)</p>
+            <div class="tl-body">
+              <ul>
+                <li>Contributed to the development and maintenance of microservices within the Jira platform using Java and Spring Boot.</li>
+                <li>Collaborated in Agile sprint cycles, participating in daily stand-ups, sprint planning, and retrospectives.</li>
+                <li>Implemented REST API endpoints, improving data retrieval efficiency by approximately 15%.</li>
+                <li>Authored unit and integration tests using JUnit 5, increasing code coverage by 12%.</li>
+                <li>Worked alongside senior engineers to refactor legacy code, adhering to SOLID design principles.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-entry">
+            <div class="tl-header">
+              <span class="tl-title">IT Support Assistant (Part-Time)</span>
+              <span class="tl-badge">Feb 2023 – May 2024</span>
+            </div>
+            <p class="tl-sub">UTS IT Services · Sydney, NSW</p>
+            <div class="tl-body">
+              <ul>
+                <li>Provided first-level technical support to students and academic staff across hardware, software, and network issues.</li>
+                <li>Documented recurring issues and contributed to the internal knowledge base, reducing average resolution time by 20%.</li>
+                <li>Assisted in the deployment and configuration of university-issued devices during semester enrolment periods.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column -->
+      <div class="resume-col">
+
+        <!-- Technical Skills -->
+        <div class="glass-card fade-in">
+          <p class="resume-block-title"><i class="fa-solid fa-code"></i> Technical Skills</p>
+
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Java</span><span class="skill-pct">85%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="85"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Python</span><span class="skill-pct">80%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="80"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">JavaScript / TypeScript</span><span class="skill-pct">75%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="75"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">HTML &amp; CSS</span><span class="skill-pct">85%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="85"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">SQL / PostgreSQL</span><span class="skill-pct">70%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="70"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Git &amp; GitHub</span><span class="skill-pct">90%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="90"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Docker / CI/CD Pipelines</span><span class="skill-pct">60%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="60"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">React.js</span><span class="skill-pct">65%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="65"></div></div>
+          </div>
+        </div>
+
+        <!-- Professional Skills -->
+        <div class="glass-card fade-in">
+          <p class="resume-block-title"><i class="fa-solid fa-people-group"></i> Professional Skills</p>
+
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Communication &amp; Presentation</span><span class="skill-pct">88%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="88"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Teamwork &amp; Collaboration</span><span class="skill-pct">92%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="92"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Problem-Solving &amp; Analysis</span><span class="skill-pct">85%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="85"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Time Management</span><span class="skill-pct">80%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="80"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Agile / Scrum Methodology</span><span class="skill-pct">78%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="78"></div></div>
+          </div>
+        </div>
+
+        <!-- Certifications & Awards -->
+        <div class="glass-card fade-in">
+          <p class="resume-block-title"><i class="fa-solid fa-award"></i> Certifications &amp; Awards</p>
+          <div class="timeline-entry">
+            <div class="tl-header">
+              <span class="tl-title">AWS Certified Cloud Practitioner</span>
+              <span class="tl-badge">2024</span>
+            </div>
+            <p class="tl-sub">Amazon Web Services</p>
+          </div>
+          <div class="timeline-entry">
+            <div class="tl-header">
+              <span class="tl-title">UTS Engineering Dean's List</span>
+              <span class="tl-badge">2023</span>
+            </div>
+            <p class="tl-sub">University of Technology Sydney</p>
+          </div>
+          <div class="timeline-entry">
+            <div class="tl-header">
+              <span class="tl-title">Google IT Support Professional Certificate</span>
+              <span class="tl-badge">2022</span>
+            </div>
+            <p class="tl-sub">Coursera / Google</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────────────────────────────
+       SECTION 3: REFLECTIVE QUESTIONS (TASK 1a)
+       ──────────────────────────────────────────────────── -->
+  <section id="reflections" class="section">
+    <h2 class="section-title fade-in">Reflective Questions</h2>
+    <p class="section-subtitle fade-in">Task 1a — Professional Identity &amp; Work Experience</p>
+    <div class="section-divider fade-in"></div>
+
+    <div class="reflections-grid">
+
+      <!-- Q1 -->
+      <div class="glass-card q-card fade-in">
+        <p class="q-number">01</p>
+        <h3 class="q-title">Describe your engineering work experience. What tasks did you perform? What projects were you involved in?</h3>
+        <p class="q-answer">
+          My primary engineering work experience was a six-month software engineering internship at Atlassian, a globally recognised technology company headquartered in Sydney. During this placement, I was embedded within a backend engineering team responsible for the Jira Service Management platform. My day-to-day responsibilities encompassed developing and maintaining microservices built on Java and Spring Boot, writing unit and integration tests using JUnit 5, and collaborating on the design of REST API endpoints that improved data retrieval performance. I was also involved in a larger project to refactor a legacy notification service, which required me to understand and apply SOLID design principles within a complex, distributed system. This experience provided me with meaningful exposure to enterprise-scale software development practices, including code review processes, continuous integration pipelines, and cross-functional collaboration with product managers, designers, and quality assurance engineers.
+        </p>
+      </div>
+
+      <!-- Q2 -->
+      <div class="glass-card q-card fade-in">
+        <p class="q-number">02</p>
+        <h3 class="q-title">What technical skills did you develop or apply during your experience?</h3>
+        <p class="q-answer">
+          The internship significantly deepened my proficiency in Java, particularly in the context of building production-grade Spring Boot applications. I gained practical experience with RESTful API design, dependency injection, and exception handling patterns that I had previously only encountered in academic settings. Additionally, I was introduced to the team's CI/CD pipeline, which leveraged Bitbucket Pipelines and Docker, providing me with hands-on exposure to containerisation and automated deployment practices. My SQL skills were reinforced through the optimisation of database queries for the notification service, and I broadened my understanding of PostgreSQL's performance tuning capabilities. Furthermore, I developed greater competency in version control workflows, including branch strategy, pull request etiquette, and merge conflict resolution within a large collaborative repository. These technical competencies have directly complemented and contextualised the theoretical foundations established through my UTS coursework.
+        </p>
+      </div>
+
+      <!-- Q3 -->
+      <div class="glass-card q-card fade-in">
+        <p class="q-number">03</p>
+        <h3 class="q-title">How did your work experience shape your professional identity as an engineer?</h3>
+        <p class="q-answer">
+          Prior to commencing my internship, my identity as an engineer was largely defined by academic performance and personal projects. However, the professional environment at Atlassian fundamentally shifted my understanding of what it means to be an engineer in practice. I came to appreciate that engineering is as much a social and communicative endeavour as it is a technical one. Participating in Agile ceremonies—sprint planning, daily stand-ups, and retrospectives—revealed the importance of clear articulation of blockers, progress, and technical trade-offs to non-technical stakeholders. Navigating code reviews taught me to approach feedback constructively and to advocate for design decisions with evidence and reasoning rather than personal preference. I now identify as an engineer who values clarity, collaboration, and continuous improvement, and who understands that software is built by people for people. This shift in perspective has made me more intentional about how I communicate and conduct myself in team settings.
+        </p>
+      </div>
+
+      <!-- Q4 -->
+      <div class="glass-card q-card fade-in">
+        <p class="q-number">04</p>
+        <h3 class="q-title">What challenges did you face and how did you overcome them?</h3>
+        <p class="q-answer">
+          One of the most significant challenges I encountered during my internship was the steep learning curve associated with inheriting a large, underdocumented legacy codebase. In an academic environment, codebases are typically self-contained and well-scoped, whereas the production system I worked within spanned hundreds of thousands of lines and multiple interdependent services. To address this, I adopted a systematic approach: I spent the first two weeks mapping the architecture through documentation, architecture diagrams, and guided walkthroughs with a senior engineer who served as my mentor. I also made deliberate use of the team's internal Confluence wiki and raised questions during one-on-one meetings rather than interrupting colleagues ad hoc. A secondary challenge was managing imposter syndrome in a high-performing environment. I overcame this by setting small, achievable milestones and celebrating incremental progress, and by seeking candid feedback from my manager during fortnightly check-ins. These strategies enabled me to deliver tangible contributions within my placement period and to build confidence in my abilities.
+        </p>
+      </div>
+
+      <!-- Q5 -->
+      <div class="glass-card q-card fade-in">
+        <p class="q-number">05</p>
+        <h3 class="q-title">How has this experience influenced your career goals?</h3>
+        <p class="q-answer">
+          My internship experience has crystallised a career direction that I had previously only vaguely envisioned. I am now committed to pursuing a role as a full-stack or backend software engineer within a product-focused technology company upon graduation. The experience demonstrated to me that I thrive in collaborative, problem-driven environments where I can see the direct impact of my technical contributions on end users. It has also reinforced my interest in distributed systems and cloud architecture, areas I wish to explore more deeply through the remainder of my degree and through self-directed study, including the AWS certifications I am pursuing. Longer term, I aspire to grow into a technical lead or solutions architect role, drawing on both my engineering expertise and the interpersonal skills developed through professional experience. The exposure to cross-functional teamwork at Atlassian has also demonstrated to me that the most impactful engineers are those who bridge the gap between technical complexity and human usability.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ────────────────────────────────────────────────────
+       SECTION 4: COVER LETTER
+       ──────────────────────────────────────────────────── -->
+  <section id="coverletter" class="section">
+    <h2 class="section-title fade-in">Cover Letter</h2>
+    <p class="section-subtitle fade-in">Graduate Software Engineer Application — NovaTech Solutions</p>
+    <div class="section-divider fade-in"></div>
+
+    <div class="glass-card cover-letter-card fade-in">
+
+      <!-- Header block -->
+      <div class="cl-header-block">
+        <p class="cl-date">11 April 2026</p>
+
+        <div class="cl-from">
+          <p class="cl-label">From</p>
+          <strong>Jonathan Chang</strong><br />
+          42 Innovation Way, Ultimo NSW 2007<br />
+          jonathan.chang@student.uts.edu.au · +61 400 123 456<br />
+          linkedin.com/in/jonathanchang-eng
+        </div>
+
+        <br />
+
+        <div class="cl-to">
+          <p class="cl-label">To</p>
+          <strong>Ms Sarah Mitchell</strong><br />
+          Head of Talent Acquisition<br />
+          NovaTech Solutions Pty Ltd<br />
+          Level 22, 1 Market Street, Sydney NSW 2000
+        </div>
+      </div>
+
+      <p class="cl-salutation">Dear Ms Mitchell,</p>
+      <p class="cl-subject">RE: Graduate Software Engineer — Reference: NTS-2026-GSE-042</p>
+
+      <div class="cl-body">
+
+        <p>
+          I am writing to apply for the Graduate Software Engineer position at NovaTech Solutions,
+          as advertised on Seek in March 2026. I am a final-year Bachelor of Engineering (Software
+          Engineering) student at the University of Technology Sydney (UTS), and I am highly
+          motivated to begin my professional career in an organisation of NovaTech's calibre, which
+          is renowned for its commitment to innovation, engineering excellence, and collaborative
+          culture. I believe my academic achievements, practical internship experience, and genuine
+          enthusiasm for software craftsmanship make me an ideal candidate for this role.
+        </p>
+
+        <!-- Criterion 1: Problem-solving -->
+        <p>
+          <span class="star-label">Criterion 1 — Problem-Solving &amp; Analytical Skills (STAR)</span><br />
+          <strong>Situation:</strong> During my internship at Atlassian, I was assigned to investigate a
+          performance regression in the Jira notification service that was causing delayed email dispatches
+          for high-volume enterprise accounts. <strong>Task:</strong> My task was to identify the root
+          cause, propose a viable solution, and implement a fix within a two-week sprint. <strong>Action:</strong>
+          I conducted a systematic analysis of the service's database query patterns using PostgreSQL's
+          EXPLAIN ANALYSE tool, ultimately identifying an N+1 query problem introduced in a recent deployment.
+          I redesigned the affected repository layer to use batch queries and coordinated with the team
+          lead to schedule a hotfix deployment following peer review. <strong>Result:</strong> The fix
+          reduced average notification processing time by 34% and eliminated the customer-reported
+          delays, directly contributing to a positive outcome in the quarterly service reliability review.
+          This experience exemplifies my ability to apply systematic analytical thinking to complex,
+          time-sensitive engineering problems.
+        </p>
+
+        <!-- Criterion 2: Teamwork -->
+        <p>
+          <span class="star-label">Criterion 2 — Teamwork &amp; Collaboration (STAR)</span><br />
+          <strong>Situation:</strong> As part of a group capstone project in my third year at UTS, my
+          team of five students was tasked with designing and delivering a full-stack web application
+          for a local non-profit organisation within a twelve-week semester. <strong>Task:</strong> I
+          served as the technical lead responsible for backend architecture and coordinating the
+          integration between our React frontend and a Node.js/Express API. <strong>Action:</strong> I
+          established clear Git branching conventions, facilitated weekly team standups, and maintained
+          a shared Notion workspace for task tracking and documentation. When a conflict arose over
+          technology choices mid-project, I facilitated a structured discussion using objective evaluation
+          criteria to reach consensus. <strong>Result:</strong> The project was delivered on schedule and
+          received a High Distinction grade. The non-profit client adopted the platform for volunteer
+          management, and the team received commendation from the subject coordinator for professionalism
+          and communication. This outcome reflects my commitment to fostering inclusive, goal-oriented
+          team environments.
+        </p>
+
+        <!-- Criterion 3: Communication -->
+        <p>
+          <span class="star-label">Criterion 3 — Communication Skills (STAR)</span><br />
+          <strong>Situation:</strong> During my internship at Atlassian, I was asked to present my
+          findings from the notification service performance investigation to the broader engineering
+          team at the fortnightly tech talk. <strong>Task:</strong> I needed to communicate technical
+          findings in a manner accessible to a mixed audience of engineers, product managers, and
+          stakeholders with varying levels of technical expertise. <strong>Action:</strong> I structured
+          the presentation around the problem statement, root cause analysis, solution approach, and
+          measured outcomes, using visual diagrams to illustrate query execution plans and avoiding
+          unnecessary jargon when addressing non-technical attendees. I practised the presentation with
+          my mentor beforehand and solicited feedback. <strong>Result:</strong> The presentation was
+          well received, and several senior engineers referred to it as a model for how to document
+          and share performance investigations. My manager noted my communication clarity in my end-of-placement
+          performance review. This experience reinforced my belief that effective technical communication
+          is a critical engineering competency.
+        </p>
+
+        <!-- Criterion 4: Technical Proficiency -->
+        <p>
+          <span class="star-label">Criterion 4 — Technical Proficiency (STAR)</span><br />
+          <strong>Situation:</strong> In a third-year subject, I was required to independently design
+          and build a distributed task management system as part of a software architecture assessment.
+          <strong>Task:</strong> The system had to support concurrent users, persist data reliably, and
+          expose a documented REST API. <strong>Action:</strong> I implemented the backend in Java using
+          Spring Boot, adopted a PostgreSQL database with optimised indexing strategies, and deployed
+          the application using Docker Compose to simulate a production-like environment. I wrote
+          comprehensive API documentation using Swagger and authored automated tests covering both
+          unit and integration levels. <strong>Result:</strong> The submission received a Distinction
+          grade. The assessor particularly noted the quality of the API design and the thoroughness
+          of the testing strategy. Through this project, I demonstrated the ability to apply industry-standard
+          tools and practices to deliver a technically sound software product independently.
+        </p>
+
+        <!-- Criterion 5: Performance under pressure -->
+        <p>
+          <span class="star-label">Criterion 5 — Working Under Pressure &amp; Meeting Deadlines (STAR)</span><br />
+          <strong>Situation:</strong> In the final week of my internship, a critical bug was discovered
+          in a recently merged feature that affected approximately 2,000 enterprise customers.
+          <strong>Task:</strong> I was part of a small incident response team tasked with diagnosing
+          and resolving the issue within a four-hour SLA window. <strong>Action:</strong> I remained
+          composed under pressure, systematically narrowed the problem scope through targeted logging
+          and environment comparison, and identified that the issue stemmed from a misconfigured
+          feature flag interaction. I proposed a targeted rollback strategy and prepared the
+          associated documentation for the post-incident review. <strong>Result:</strong> The issue
+          was resolved within three hours and fifty minutes, within the SLA threshold. My composure
+          and methodical approach during the incident were formally recognised in my placement
+          feedback report. This experience has demonstrated to me that I am capable of maintaining
+          clarity of thought and professional conduct in high-pressure engineering environments.
+        </p>
+
+        <p>
+          I am eager to bring the skills, commitment, and professional attitude developed through my
+          academic studies and work-integrated learning experience to NovaTech Solutions. I would
+          welcome the opportunity to discuss my application further at your convenience. I am available
+          for interview at any time and can provide academic transcripts, reference letters, and a
+          portfolio of project work upon request.
+        </p>
+
+        <p>Thank you sincerely for your time and consideration.</p>
+
+      </div>
+
+      <div class="cl-signoff">
+        <p>Yours sincerely,</p>
+        <p class="sig-name">Jonathan Chang</p>
+        <p style="color:var(--text-muted); font-size:0.85rem; margin-top:0.3rem;">
+          Bachelor of Engineering (Software Engineering), UTS · Class of 2026
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- Script -->
+<script src="script.js"></script>
+</body>
+</html>
