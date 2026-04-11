@@ -1,5 +1,5 @@
 // ============================================================
-// Jonathan Chang — UTS E-Portfolio Script
+// Jonathan Chang - UTS E-Portfolio Script
 // Particle background | Typewriter | Scroll animations | Nav
 // ============================================================
 
@@ -86,11 +86,11 @@
   if (!el) return;
 
   const phrases = [
-    'Engineering Student',
-    'Software Developer',
-    'UTS Student',
+    'Engineering Honours Student',
+    'Team Lead',
+    'Backend Developer',
+    'Systems Builder',
     'Problem Solver',
-    'Tech Enthusiast',
   ];
 
   let phraseIdx = 0;
