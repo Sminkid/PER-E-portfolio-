@@ -6,7 +6,7 @@ Professional e-portfolio website for Jonathan Chang, built with plain HTML, CSS,
 
 If GitHub Pages is enabled for this repository, the site is available at:
 
-https://sminkid.github.io/PER-E-portfolio-/
+ https://sminkid.github.io/PER-E-portfolio-/
 
 ## Project Stack
 
