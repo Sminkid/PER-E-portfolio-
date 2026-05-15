@@ -199,18 +199,20 @@ body {
    SECTION 1: HOME
    ────────────────────────────────────────────────────────── */
 #home {
-  padding-top: 0;
+  padding: 0 4rem;
   min-height: 100vh;
   display: flex;
   align-items: center;
 }
 
 .home-inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
   align-items: center;
-  gap: 3.5rem;
-  flex-wrap: wrap;
-  max-width: 1040px;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
 }
 
 /* Avatar */
@@ -220,8 +222,8 @@ body {
 }
 
 .avatar-ring {
-  width: 230px;
-  height: 230px;
+  width: 280px;
+  height: 280px;
   border-radius: 50%;
   padding: 5px;
   overflow: hidden;
@@ -263,7 +265,10 @@ body {
 }
 
 /* Home text */
-.home-text { flex: 1; min-width: 260px; }
+.home-text {
+  min-width: 0;
+  max-width: 760px;
+}
 
 .greeting {
   font-size: 0.9rem;
@@ -310,7 +315,7 @@ body {
   color: var(--text-muted);
   line-height: 1.75;
   font-size: 0.97rem;
-  max-width: 520px;
+  max-width: none;
   margin-bottom: 2rem;
 }
 
@@ -656,16 +661,18 @@ body {
   #main { margin-left: 0; }
 
   .section { padding: 4rem 1.5rem 6rem; }
-  .home-inner { gap: 2rem; justify-content: center; text-align: center; }
+  #home { padding: 3rem 1.5rem 4rem; }
+  .home-inner { grid-template-columns: 1fr; gap: 2rem; justify-items: center; text-align: center; }
   .home-bio { margin: 0 auto 2rem; }
   .cta-buttons { justify-content: center; }
-  .avatar-ring { width: 150px; height: 150px; }
+  .avatar-ring { width: 170px; height: 170px; }
   .avatar-img { object-position: center 18%; transform: scale(1.14); }
   .home-name { font-size: 2.2rem; }
 }
 
 @media (max-width: 480px) {
   .section { padding: 3rem 1rem 6rem; }
+  #home { padding: 2.5rem 1rem 3.5rem; }
   .glass-card { padding: 1.4rem; }
   .project-card { padding: 1.35rem 1.35rem 1.25rem 1.45rem; }
   .projects-grid { grid-template-columns: 1fr; }
