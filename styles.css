@@ -456,6 +456,27 @@ body {
   max-width: none;
 }
 
+.github-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.5rem;
+  background: var(--accent, #4f8ef7);
+  color: #fff;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 12px rgba(79,142,247,0.25);
+}
+
+.github-btn:hover {
+  background: var(--accent-dark, #2563eb);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79,142,247,0.4);
+}
+
 .project-card {
   position: relative;
   overflow: hidden;
